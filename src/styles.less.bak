@@ -1,0 +1,421 @@
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import '../node_modules/material-icons/iconfont/material-icons.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@color-weekend: red;
+@main-color: #cf0017;
+@submain-color: #5EC300;
+
+/*@main-color: #007bff80;
+@submain-color: #007bff;*/
+/* Master Styles */
+* {
+  /*font-family: monospace !important;*/
+}
+
+.btn-primary, .btn-primary:hover{
+  color: #fff;
+  background-color: @main-color;
+  border-color: @main-color;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+  background-color: @main-color;
+  border-color: @main-color;
+}
+
+a, a:hover {
+  color: @main-color;
+}
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+body {
+    margin: 1em;
+    background: #eeeeee;
+    margin: 5px auto;
+}
+
+@media (min-width: 1200px) {
+    body {
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    body {
+        width: 80%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body {
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    body {
+        width: 100%;
+    }
+}
+body, input[text], button {
+  color: #000;
+  font-family: Cambria, Georgia;
+}
+
+a {
+  cursor: pointer;
+  cursor: hand;
+}
+
+button {
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
+
+/* Navigation link styles */
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+nav a:visited, a:link {
+  /*color: #607D8B;*/
+}
+
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+
+nav a.active {
+  color: #039be5;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container, .container-fluid {
+  border: solid 1px #dee2e6;
+  /*border-radius: 5px;*/
+  border-top:0px;
+  padding: 10px 20px;
+  background: #fff;
+  /*box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 10px;*/
+  margin-bottom: 10px;
+}
+
+nav {
+  margin: -5px 0;
+}
+
+nav a {
+  background: #e2e1e1;
+  border: 1px solid #afafaf;
+  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+h2 > span {
+  color: #fff;
+}
+
+h3 > span {
+    /*background: @main-color;*/
+    color: #cf0017;
+    padding: 4px 8px;
+    border-radius: 3px;
+    /*box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);*/
+}
+
+.heading {
+  background: @main-color;
+  color: #fff;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+button.calendar, button.calendar:active {
+  width: 2.75rem;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+}
+
+table td,th,label {
+  font-size: 14px;
+  color: #000000;
+}
+textarea {
+  width: 100%;
+  resize: none;
+}
+.road-map {
+  /*border: solid 1px #A9A9A9;
+  border-right: none;
+  background: #f8f9fa;*/
+  padding: 13px 13px;
+  height: 78px;
+  /*padding: 19px 10px;
+  height: 63px; 
+  width: 20%;*/
+  color: #000;
+}
+.road-map + div {
+  width: 80%;
+  height: 78px;
+  border: solid 1px #A9A9A9;
+}
+.road-map + div > textarea{
+  border:none;
+}
+
+a > span.home {
+  display: block;
+  float: right;
+  margin-top: 3px;
+}
+
+.tooltip-inner {
+   max-width: none;
+  white-space: normal;
+}
+
+.noedit {
+  background-color: #F5F5F5;
+  border: 1px solid #DEE2E6;
+  overflow-y: scroll;
+  height: 230px;
+  padding: 5px;
+}
+
+
+
+//** CSS For Multiselect **//
+.c-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.selected-list .c-list .c-token {
+  background: #0079FE;
+}
+
+.selected-list .c-list .c-token .c-label {
+  color: #fff;
+}
+
+.selected-list .c-list .c-token .c-remove svg {
+  fill: #fff;
+}
+
+.selected-list .c-angle-down svg, .selected-list .c-angle-up svg {
+  fill: #333;
+}
+
+.dropdown-list ul li:hover {
+  background: #f5f5f5;
+}
+
+.arrow-up, .arrow-down {
+  border-bottom: 15px solid #fff;
+}
+
+.arrow-2 {
+  border-bottom: 15px solid #ccc;
+}
+
+.list-area {
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0px 1px 5px #959595;
+}
+
+.select-all {
+  border-bottom: 1px solid #ccc;
+}
+
+.list-filter {
+  border-bottom: 1px solid #ccc;
+}
+
+.list-filter .c-search svg {
+  fill: #888;
+}
+
+.list-filter .c-clear svg {
+  fill: #888;
+}
+
+.pure-checkbox input[type="checkbox"]:focus + label:before, .pure-checkbox input[type="checkbox"]:hover + label:before {
+  border-color: #0079FE;
+  background-color: #f2f2f2;
+}
+
+.pure-checkbox input[type="checkbox"] + label {
+  color: #000;
+}
+
+.pure-checkbox input[type="checkbox"] + label:before {
+  color: #0079FE;
+  border: 2px solid #0079FE;
+}
+
+.pure-checkbox input[type="checkbox"] + label:after {
+  background-color: #0079FE;
+}
+
+.pure-checkbox input[type="checkbox"]:disabled + label:before {
+  border-color: #cccccc;
+}
+
+.pure-checkbox input[type="checkbox"]:disabled:checked + label:before {
+  background-color: #cccccc;
+}
+
+.pure-checkbox input[type="checkbox"] + label:after {
+  border-color: #ffffff;
+}
+
+.pure-checkbox input[type="radio"]:checked + label:before {
+  background-color: white;
+}
+
+.pure-checkbox input[type="checkbox"]:checked + label:before {
+  background: #0079FE;
+}
+
+.selected-item {
+  background: #e9f4ff;
+}
+
+.btn-iceblue {
+  background: #0079FE;
+  border: 1px solid #ccc;
+  color: #fff;
+}
+//** CSS For Multiselect **//
+
+body {
+  overflow: hidden;
+}
+
+
+.my-custom-class .tooltip-inner {
+  background-color: #0E548C;  
+}
+
+.my-custom-class .arrow::before {
+  border-top-color: #0E548C;
+  border-bottom-color: #0E548C;  
+}
+.my-custom-class .arrow {
+  /*border-left-color : #0E548C;
+  border-right-color: #0E548C;*/ 
+}
+
+div.introlabel {
+  background: #B6C96E;
+  height: 35px;
+  margin-bottom: 10px;
+}
+.introlabel > div {
+  color: #fff;
+  padding: 5px 21px;
+  font-size: 16px;
+}
+.introtable {
+  background: #4EB6BF;
+  color: #fff;  
+}
+
+.tr {
+  width: 100%;
+  border: 1px solid #CED4DA;
+  float: left;
+  margin: 1px;
+}
+.r1-head {
+  width: 15%;
+  float: left;
+  padding: 5px 0 0 50px;
+}
+
+.r2-head {
+  width: 85%;
+  float: left;
+  padding: 5px 0 0 50px;
+}
+
+.r1 {
+  width: 15%;
+  float: left;  
+  padding: 15px 0 0 50px;
+}
+
+.r2 {
+  width: 85%;
+  float: left;
+  padding-left: 15px;  
+}
+
+.tooltip-inner {
+  text-align: left;
+}
+/*.sticky-top-ie {
+  position: fixed;
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 211, 211, 0.6);
+}*/
+
+
+.sticky {
+  height:50px;
+  top: 190px;
+}

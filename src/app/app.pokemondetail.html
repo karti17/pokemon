@@ -1,0 +1,34 @@
+<div class="container-fluid">	
+	<div class="form-row">
+		<div class="col-sm-12">
+			<a routerLink="/todos" data-rel="collapse" class="float-right"><i class="glyphicon glyphicon-plus"></i>Back</a>
+		</div>
+	</div>
+	<div class="form-row listingCont" *ngIf="exp.todos.length>0">
+		<div class="dtl-img">
+			<img src="{{exp.todos[0].sprites.other['official-artwork'].front_default}}" />
+		</div>
+		<div style="float: left;margin-left: 2px; width:60%;">
+			<div class='dtl-text'><strong>Name: </strong>{{exp.todos[0].name}}</div>
+			<div class='dtl-text'><strong>Height: </strong>{{exp.todos[0].height}}</div>
+			<div class='dtl-text'><strong>Weight: </strong>{{exp.todos[0].weight}}</div>
+			
+			<div class='dtl-text' style="float:left; width:25%;"><strong>Abilities: </strong>
+				<div *ngFor="let d of exp.todos[0].abilities">
+					{{d.ability.name}}
+				</div>
+			</div>
+			<div class='dtl-text' style="float:left; width:25%;"><strong>Moves: </strong>
+				<div *ngFor="let d of exp.todos[0].moves">
+					{{d.move.name}}
+				</div>
+			</div>
+			<div class='dtl-text' style="float:left; width:25%;"><strong>Game Indices: </strong>
+				<div *ngFor="let d of exp.todos[0].game_indices">
+					{{d.version.name}}
+				</div>
+			</div>
+		</div>
+	</div> 	
+  
+</div>

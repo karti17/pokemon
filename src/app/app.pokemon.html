@@ -1,0 +1,72 @@
+<div class="container-fluid">	
+  
+
+	<div class="form-row item">		
+		  <div class="col-sm-2"><h3>Pokemon</h3></div>
+		  <div class="col-sm-4">
+			  <input type="text" name="Search" class="form-control" [(ngModel)]="srchtxt"  (blur)="savesearch()" Placeholder="Search text" />		  	
+		  </div>
+		  <div class="col-sm-2">
+			<select name="sort" [(ngModel)]="exp.sort" class="form-control" (change)="sortpokemon()">
+				<option selected value="name">Name</option>
+				<option value="height">Height</option>
+				<option value="weight">Weight</option>
+			</select>
+		  </div>
+		  <div class="col-sm-4">			
+			<mat-paginator [length]="10000"
+				[pageSize]=pageSize
+				[pageSizeOptions]="[10, 20, 50]"
+				(page)="pageEvent = getServerData($event)"
+				aria-label="Select page">
+			</mat-paginator>
+			<!--<span class="float-right"><a [routerLink]="['/addtodo']" data-rel="collapse">Add Todo</a></span>-->
+			<!--<select class="form-control" #newlist="ngModel" [(ngModel)]="exp.newlist" name="newlist" placeholder="Cccupant" required (change)="selectNewList()">
+				<option [ngValue]="defaultValue">Please Select</option>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="50">50</option>
+				<option value="100">100</option>
+			</select>-->
+		  </div>
+		  	
+	</div>	
+	  
+	<div class="form-row listingCont">
+		
+		<div *ngFor="let c of exp.todos | filter:srchtxt; index as i;" class="card">          
+			<a  routerLink="/pokemondetail/{{c.name}}">
+				<div class="p-img">
+					<img src="{{c.img}}" />
+				</div>
+			</a>
+			<div>
+				<div style="float: left;margin-left: 2px; width:50%;">
+					<div class='p-text'><strong>Name: </strong>{{c.name}}</div>
+					<div class='p-text'><strong>Height: </strong>{{c.height}}</div>
+					<div class='p-text'><strong>Weight: </strong>{{c.weight}}</div>
+				</div>
+				<div class='p-text' style="float:left; width:49%;"><strong>Abilities: </strong>
+					<div *ngFor="let d of c.abilities">
+						{{d.ability.name}}
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div> 
+	<div class="form-row item">		
+		<div class="col-sm-2">			
+		</div>
+		<div class="col-sm-4">
+		</div>
+		<div class="col-sm-6">			
+		  <mat-paginator [length]="10000"
+			  [pageSize]=pageSize
+			  [pageSizeOptions]="[10, 20, 50]"
+			  (page)="pageEvent = getServerData($event)"
+			  aria-label="Select page">
+		  </mat-paginator>		  
+		</div>			
+  </div>	
+</div>
